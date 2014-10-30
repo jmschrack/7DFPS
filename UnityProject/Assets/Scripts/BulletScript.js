@@ -130,7 +130,7 @@ function Update () {
 				if(!aim_script){
 					hole.transform.parent = hit_obj.transform;
 				} else {
-					hole.transform.parent = GameObject.Find("Main Camera").transform;
+					hole.transform.parent = GameObject.Find("OVRCameraRig").transform;
 				}
 			}
 			hit_something = true;

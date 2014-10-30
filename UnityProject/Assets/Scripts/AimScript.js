@@ -302,7 +302,7 @@ function Start() {
 	for(var renderer : Renderer in renderers){
 		renderer.castShadows = false; 
 	}
-	main_camera = GameObject.Find("Main Camera").gameObject;
+	main_camera = GameObject.Find("OVRCameraRig").gameObject;
 	character_controller = GetComponent(CharacterController);
 	for(var i=0; i<kMaxHeadRecoil; ++i){
 		head_recoil_delay[i] = -1.0;

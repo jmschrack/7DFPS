@@ -3,7 +3,7 @@
 var level_tiles : GameObject[];
 var shadowed_lights : Array;
 var tiles : Array;
-
+public var cam : GameObject;
 function SpawnTile(where:int, challenge:float , player:boolean){
 	var level_obj = level_tiles[Random.Range(0,level_tiles.Length)];
 	var level = new GameObject(level_obj.name + " (Clone)");
@@ -85,7 +85,7 @@ function CreateTileIfNeeded(which:int){
 
 
 function Update () {
-	var main_camera = GameObject.Find("Main Camera").transform;
+	var main_camera = cam.transform;
 	var tile_x : int = main_camera.position.z / 20.0 + 0.5;
 	for(var i=-2; i <= 2; ++i){
 		CreateTileIfNeeded(tile_x+i);
